@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2" Unoptimized>
   <img src="/public/logo2.png" alt="Cyberbloom" className="logo" />
 
   
