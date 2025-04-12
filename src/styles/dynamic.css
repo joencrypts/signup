@@ -38,9 +38,111 @@
   color: #ffffff;
 }
 
+/* In your CSS file, add this code */
+
+.navbar {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 10%;
+}
+
+.navbar .logo {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 10%;
+  display: block;
+}
+
+
+.navbar .logo-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 100%;         /* Ensure it takes full height of navbar */
+}
+
+
+
+.menu a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+
+.menu a:hover {
+  color: #a8a8ff;
+}
+
+/* Mobile styles remain unchanged */
+.navbar .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none;
+  }
+
+  .navbar .mobile-menu {
+    display: block;
+  }
+
+  .navbar .mobile-menu-items {
+    display: block;
+    background-color: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    border-top: 1px solid #444;
+  }
+
+  .navbar .mobile-menu-items a {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    display: block;
+    color: white;
+  }
+
+  .navbar .mobile-menu-items a:hover {
+    background-color: #555;
+  }
+}
+
+/* In your CSS file */
+.logo {
+  height: 100px;  /* Adjust to your desired height */
+  width: 100px;   /* Adjust to your desired width */
+  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+  border-radius: 10%; /* If you want rounded edges */
+}
+
+
 /* Card Styles */
 .quiz-card {
   background: rgba(0, 0, 0, 0.8);
+  margin-top: 10px; /* or padding-top */
   border-radius: 15px;
   padding: 2rem;
   width: 90%;

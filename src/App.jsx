@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Quiz from './pages/Quiz';
 import Report from './pages/Report';
+import Navbar from './components/Navbar';
 import './styles/dynamic.css';
 
 // Protected Route component
@@ -17,7 +18,9 @@ function App() {
     <UserProvider>
       <Router>
         <div className="app-container">
+          <Navbar />
           <div className="quiz-card">
+            {/* <Navbar />*/}
             <Routes>
               <Route path="/" element={<Navigate to="/login" replace />} />
               <Route path="/login" element={<Login />} />

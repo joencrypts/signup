@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase/config';
 import { useUser } from '../context/UserContext';
+import Navbar from '../components/Navbar'; 
 import '../styles/dynamic.css';
 
 function Login() {
@@ -51,6 +52,7 @@ function Login() {
   };
 
   return (
+    <div>
     <div className="login-container">
       <h2>Welcome Back</h2>
       {successMessage && <div className="success-message">{successMessage}</div>}
@@ -88,6 +90,7 @@ function Login() {
           Sign Up
         </button>
       </p>
+    </div>
     </div>
   );
 }
